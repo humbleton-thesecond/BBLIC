@@ -1,2 +1,2 @@
 # BBLIC
-a dsl by me (currently having active development)
+a dsl by me inspired by *Breaking Bad*
