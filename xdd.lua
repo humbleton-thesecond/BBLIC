@@ -2,51 +2,6 @@
 
 local state = {}
 
-local example_code = {
-  [[
-  # Cooking Meth
-  
-  cook meth 5
-  ]],
-
-  [[
-  # Repeated Cooking
-  
-  ding 10 times then 
-    cook meth 5  
-  end_ding]],
-
-  [[
-  # Heisenberg's Daily Schedule
-
-  COOK blue_meth 5
-  check_stash blue_meth
-
-  IF blue_meth EQUALS 2 THEN
-    cook chili_p 5
-    DING 2 TIMES THEN # This DING loop is nested inside the IF block
-      check_stash chili_p
-    END_DING
-  END_IF
-
-  sell blue_meth 5 # This will fail if not enough from previous sales
-  check_stash blue_meth
-
-  IF blue_meth EQUALS 0 THEN
-    say_my_name Jesse
-    COOK blue_meth 10
-    check_stash blue_meth
-  END_IF
-  ]],
-  [[
-  # cleaning products from stash using clean_lab
-  
-  cook test 10
-  
-  clean_lab test
-  ]]
-}
-
 -- --- Utility function for string splitting ---
 -- This function is crucial for parsing the new syntax
 function split(str, delimiter)
@@ -141,6 +96,11 @@ local valid_commands = {
 }
 -- Core interpreter function
 function execute_bb_lang(code_lines)
+  print"-- Starting BB Code --"
+  
+  -- Split the entire code string into lines for processing
+  local code = split(bb_code, "\n")
+  
   -- These flags are local to each call of execute_bb_lang, enabling recursion for blocks
   local in_if_block = false
   local if_condition_met = false
@@ -150,7 +110,7 @@ function execute_bb_lang(code_lines)
   local ding_count = 0
   local ding_block_lines = {}
 
-  for i, line in ipairs(code_lines) do
+  for i, line in ipairs(code) do
     line = string.trim(line)
     if line == "" or line:sub(1,1) == "#" then
         goto continue_loop
@@ -279,19 +239,10 @@ function execute_bb_lang(code_lines)
     end
     ::continue_loop::
   end
+  print"-- Ending BB Code --"
 end
 
 -- Extend string library for trimming (useful for parsing)
 function string.trim(s)
    return s:match("^%s*(.*%S)%s*$") or ""
 end
-
--- Breaking Bad language code with IF statements and DING loops
-local bb_code = example_code[4]
-
--- Split the entire code string into lines for processing
-local code_lines = split(bb_code, "\n")
-
-print("--- Starting Breaking Bad Script ---")
-execute_bb_lang(code_lines)
-print("--- Breaking Bad Script Finished ---")
