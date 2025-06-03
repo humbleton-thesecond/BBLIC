@@ -1,0 +1,565 @@
+
+main <xdd.lua:0,0> (35 instructions at 00762388)
+0+ params, 11 slots, 1 upvalue, 2 locals, 15 constants, 9 functions
+	1	[1]	VARARGPREP	0
+	2	[3]	NEWTABLE 	0 0 0	; 0
+	3	[3]	EXTRAARG 	0
+	4	[18]	CLOSURE  	1 0	; 00768f40
+	5	[7]	SETTABUP 	0 0 1	; _ENV "split"
+	6	[25]	CLOSURE  	1 1	; 00769f38
+	7	[22]	SETTABUP 	0 1 1	; _ENV "cook"
+	8	[34]	CLOSURE  	1 2	; 007691f0
+	9	[27]	SETTABUP 	0 2 1	; _ENV "sell"
+	10	[42]	CLOSURE  	1 3	; 00769478
+	11	[36]	SETTABUP 	0 3 1	; _ENV "check_stash"
+	12	[46]	CLOSURE  	1 4	; 00762530
+	13	[44]	SETTABUP 	0 4 1	; _ENV "say_my_name"
+	14	[63]	CLOSURE  	1 5	; 0076af48
+	15	[49]	SETTABUP 	0 5 1	; _ENV "evaluate_condition"
+	16	[84]	CLOSURE  	1 6	; 0076b1d0
+	17	[65]	SETTABUP 	0 6 1	; _ENV "cleanLab"
+	18	[86]	NEWTABLE 	1 0 9	; 9
+	19	[86]	EXTRAARG 	0
+	20	[87]	LOADK    	2 1	; "cook"
+	21	[88]	LOADK    	3 2	; "sell"
+	22	[89]	LOADK    	4 3	; "check_stash"
+	23	[90]	LOADK    	5 4	; "say_my_name"
+	24	[91]	LOADK    	6 7	; "if"
+	25	[92]	LOADK    	7 8	; "end_if"
+	26	[93]	LOADK    	8 9	; "ding"
+	27	[94]	LOADK    	9 10	; "end_ding"
+	28	[96]	LOADK    	10 11	; "clean_lab"
+	29	[96]	SETLIST  	1 9 0
+	30	[243]	CLOSURE  	2 7	; 0076b2f8
+	31	[98]	SETTABUP 	0 12 2	; _ENV "execute_bb_lang"
+	32	[246]	GETTABUP 	2 0 13	; _ENV "string"
+	33	[248]	CLOSURE  	3 8	; 007610a8
+	34	[246]	SETFIELD 	2 14 3	; "trim"
+	35	[248]	RETURN   	2 1 1	; 0 out
+
+function <xdd.lua:7,18> (44 instructions at 00768f40)
+2 params, 12 slots, 1 upvalue, 6 locals, 5 constants, 0 functions
+	1	[8]	NEWTABLE 	2 0 0	; 0
+	2	[8]	EXTRAARG 	0
+	3	[9]	LOADI    	3 1
+	4	[10]	GETTABUP 	4 0 0	; _ENV "string"
+	5	[10]	GETFIELD 	4 4 1	; "find"
+	6	[10]	MOVE     	5 0
+	7	[10]	MOVE     	6 1
+	8	[10]	MOVE     	7 3
+	9	[10]	CALL     	4 4 3	; 3 in 2 out
+	10	[11]	TEST     	4 0
+	11	[11]	JMP      	22	; to 34
+	12	[12]	GETTABUP 	6 0 2	; _ENV "table"
+	13	[12]	GETFIELD 	6 6 3	; "insert"
+	14	[12]	MOVE     	7 2
+	15	[12]	GETTABUP 	8 0 0	; _ENV "string"
+	16	[12]	GETFIELD 	8 8 4	; "sub"
+	17	[12]	MOVE     	9 0
+	18	[12]	MOVE     	10 3
+	19	[12]	ADDI     	11 4 -1
+	20	[12]	MMBINI   	4 1 7 0	; __sub
+	21	[12]	CALL     	8 4 0	; 3 in all out
+	22	[12]	CALL     	6 0 1	; all in 0 out
+	23	[13]	ADDI     	3 5 1
+	24	[13]	MMBINI   	5 1 6 0	; __add
+	25	[14]	GETTABUP 	6 0 0	; _ENV "string"
+	26	[14]	GETFIELD 	6 6 1	; "find"
+	27	[14]	MOVE     	7 0
+	28	[14]	MOVE     	8 1
+	29	[14]	MOVE     	9 3
+	30	[14]	CALL     	6 4 3	; 3 in 2 out
+	31	[14]	MOVE     	5 7
+	32	[14]	MOVE     	4 6
+	33	[14]	JMP      	-24	; to 10
+	34	[16]	GETTABUP 	6 0 2	; _ENV "table"
+	35	[16]	GETFIELD 	6 6 3	; "insert"
+	36	[16]	MOVE     	7 2
+	37	[16]	GETTABUP 	8 0 0	; _ENV "string"
+	38	[16]	GETFIELD 	8 8 4	; "sub"
+	39	[16]	MOVE     	9 0
+	40	[16]	MOVE     	10 3
+	41	[16]	CALL     	8 3 0	; 2 in all out
+	42	[16]	CALL     	6 0 1	; all in 0 out
+	43	[17]	RETURN1  	2
+	44	[18]	RETURN0  	
+
+function <xdd.lua:22,25> (23 instructions at 00769f38)
+2 params, 9 slots, 2 upvalues, 2 locals, 4 constants, 0 functions
+	1	[23]	GETUPVAL 	2 0	; state
+	2	[23]	GETUPVAL 	3 0	; state
+	3	[23]	GETTABLE 	3 3 0
+	4	[23]	TEST     	3 1
+	5	[23]	JMP      	1	; to 7
+	6	[23]	LOADI    	3 0
+	7	[23]	ADD      	3 3 1
+	8	[23]	MMBIN    	3 1 6	; __add
+	9	[23]	SETTABLE 	2 0 3
+	10	[24]	GETTABUP 	2 1 0	; _ENV "print"
+	11	[24]	LOADK    	3 1	; "Cooked "
+	12	[24]	MOVE     	4 1
+	13	[24]	LOADK    	5 2	; " units of "
+	14	[24]	MOVE     	6 0
+	15	[24]	LOADK    	7 3	; ". Current amount: "
+	16	[24]	GETUPVAL 	8 0	; state
+	17	[24]	GETTABLE 	8 8 0
+	18	[24]	TEST     	8 1
+	19	[24]	JMP      	1	; to 21
+	20	[24]	LOADI    	8 0
+	21	[24]	CONCAT   	3 6
+	22	[24]	CALL     	2 2 1	; 1 in 0 out
+	23	[25]	RETURN0  	
+
+function <xdd.lua:27,34> (35 instructions at 007691f0)
+2 params, 9 slots, 2 upvalues, 2 locals, 6 constants, 0 functions
+	1	[28]	GETUPVAL 	2 0	; state
+	2	[28]	GETTABLE 	2 2 0
+	3	[28]	TEST     	2 0
+	4	[28]	JMP      	24	; to 29
+	5	[28]	GETUPVAL 	2 0	; state
+	6	[28]	GETTABLE 	2 2 0
+	7	[28]	LE       	1 2 0
+	8	[28]	JMP      	20	; to 29
+	9	[29]	GETUPVAL 	2 0	; state
+	10	[29]	GETUPVAL 	3 0	; state
+	11	[29]	GETTABLE 	3 3 0
+	12	[29]	SUB      	3 3 1
+	13	[29]	MMBIN    	3 1 7	; __sub
+	14	[29]	SETTABLE 	2 0 3
+	15	[30]	GETTABUP 	2 1 0	; _ENV "print"
+	16	[30]	LOADK    	3 1	; "Sold "
+	17	[30]	MOVE     	4 1
+	18	[30]	LOADK    	5 2	; " units of "
+	19	[30]	MOVE     	6 0
+	20	[30]	LOADK    	7 3	; ". Remaining: "
+	21	[30]	GETUPVAL 	8 0	; state
+	22	[30]	GETTABLE 	8 8 0
+	23	[30]	TEST     	8 1
+	24	[30]	JMP      	1	; to 26
+	25	[30]	LOADI    	8 0
+	26	[30]	CONCAT   	3 6
+	27	[30]	CALL     	2 2 1	; 1 in 0 out
+	28	[30]	JMP      	6	; to 35
+	29	[32]	GETTABUP 	2 1 0	; _ENV "print"
+	30	[32]	LOADK    	3 4	; "Not enough "
+	31	[32]	MOVE     	4 0
+	32	[32]	LOADK    	5 5	; " to sell!"
+	33	[32]	CONCAT   	3 3
+	34	[32]	CALL     	2 2 1	; 1 in 0 out
+	35	[34]	RETURN0  	
+
+function <xdd.lua:36,42> (23 instructions at 00769478)
+1 param, 6 slots, 2 upvalues, 1 local, 5 constants, 0 functions
+	1	[37]	GETUPVAL 	1 0	; state
+	2	[37]	GETTABLE 	1 1 0
+	3	[37]	TEST     	1 0
+	4	[37]	JMP      	12	; to 17
+	5	[38]	GETTABUP 	1 1 0	; _ENV "print"
+	6	[38]	LOADK    	2 1	; "Amount of "
+	7	[38]	MOVE     	3 0
+	8	[38]	LOADK    	4 2	; " in the stash: "
+	9	[38]	GETUPVAL 	5 0	; state
+	10	[38]	GETTABLE 	5 5 0
+	11	[38]	TEST     	5 1
+	12	[38]	JMP      	1	; to 14
+	13	[38]	LOADI    	5 0
+	14	[38]	CONCAT   	2 4
+	15	[38]	CALL     	1 2 1	; 1 in 0 out
+	16	[38]	JMP      	6	; to 23
+	17	[40]	GETTABUP 	1 1 0	; _ENV "print"
+	18	[40]	LOADK    	2 3	; "No "
+	19	[40]	MOVE     	3 0
+	20	[40]	LOADK    	4 4	; " in the stash yet."
+	21	[40]	CONCAT   	2 3
+	22	[40]	CALL     	1 2 1	; 1 in 0 out
+	23	[42]	RETURN0  	
+
+function <xdd.lua:44,46> (4 instructions at 00762530)
+1 param, 3 slots, 1 upvalue, 1 local, 1 constant, 0 functions
+	1	[45]	GETTABUP 	1 0 0	; _ENV "print"
+	2	[45]	MOVE     	2 0
+	3	[45]	CALL     	1 2 1	; 1 in 0 out
+	4	[46]	RETURN0  	
+
+function <xdd.lua:49,63> (41 instructions at 0076af48)
+3 params, 8 slots, 2 upvalues, 5 locals, 7 constants, 0 functions
+	1	[50]	GETUPVAL 	3 0	; state
+	2	[50]	GETTABLE 	3 3 0
+	3	[50]	TEST     	3 1
+	4	[50]	JMP      	1	; to 6
+	5	[50]	LOADI    	3 0
+	6	[51]	GETTABUP 	4 1 0	; _ENV "string"
+	7	[51]	GETFIELD 	4 4 1	; "lower"
+	8	[51]	MOVE     	5 1
+	9	[51]	CALL     	4 2 2	; 1 in 1 out
+	10	[53]	EQK      	4 2 0	; "less_than"
+	11	[53]	JMP      	6	; to 18
+	12	[54]	LT       	3 2 1
+	13	[54]	JMP      	1	; to 15
+	14	[54]	LFALSESKIP	5
+	15	[54]	LOADTRUE 	5
+	16	[54]	RETURN1  	5
+	17	[54]	JMP      	23	; to 41
+	18	[55]	EQK      	4 3 0	; "greater_than"
+	19	[55]	JMP      	6	; to 26
+	20	[56]	LT       	2 3 1
+	21	[56]	JMP      	1	; to 23
+	22	[56]	LFALSESKIP	5
+	23	[56]	LOADTRUE 	5
+	24	[56]	RETURN1  	5
+	25	[56]	JMP      	15	; to 41
+	26	[57]	EQK      	4 4 0	; "equals"
+	27	[57]	JMP      	6	; to 34
+	28	[58]	EQ       	3 2 1
+	29	[58]	JMP      	1	; to 31
+	30	[58]	LFALSESKIP	5
+	31	[58]	LOADTRUE 	5
+	32	[58]	RETURN1  	5
+	33	[58]	JMP      	7	; to 41
+	34	[60]	GETTABUP 	5 1 5	; _ENV "print"
+	35	[60]	LOADK    	6 6	; "Yo, that's not a valid operator: "
+	36	[60]	MOVE     	7 1
+	37	[60]	CONCAT   	6 2
+	38	[60]	CALL     	5 2 1	; 1 in 0 out
+	39	[61]	LOADFALSE	5
+	40	[61]	RETURN1  	5
+	41	[63]	RETURN0  	
+
+function <xdd.lua:65,84> (39 instructions at 0076b1d0)
+1 param, 5 slots, 2 upvalues, 1 local, 11 constants, 0 functions
+	1	[66]	TEST     	0 1
+	2	[66]	JMP      	4	; to 7
+	3	[68]	GETTABUP 	1 0 0	; _ENV "print"
+	4	[68]	LOADK    	2 1	; "Lab cleaning skipped: No product specified."
+	5	[68]	CALL     	1 2 1	; 1 in 0 out
+	6	[68]	JMP      	32	; to 39
+	7	[69]	GETTABUP 	1 0 2	; _ENV "string"
+	8	[69]	GETFIELD 	1 1 3	; "lower"
+	9	[69]	MOVE     	2 0
+	10	[69]	CALL     	1 2 2	; 1 in 1 out
+	11	[69]	EQK      	1 4 0	; "all"
+	12	[69]	JMP      	7	; to 20
+	13	[71]	NEWTABLE 	1 0 0	; 0
+	14	[71]	EXTRAARG 	0
+	15	[71]	SETUPVAL 	1 1	; state
+	16	[72]	GETTABUP 	1 0 0	; _ENV "print"
+	17	[72]	LOADK    	2 5	; "Lab cleaned. All products removed from stash."
+	18	[72]	CALL     	1 2 1	; 1 in 0 out
+	19	[72]	JMP      	19	; to 39
+	20	[75]	GETUPVAL 	1 1	; state
+	21	[75]	GETTABLE 	1 1 0
+	22	[75]	TEST     	1 0
+	23	[75]	JMP      	9	; to 33
+	24	[77]	GETUPVAL 	1 1	; state
+	25	[77]	SETTABLE 	1 0 6k	; nil
+	26	[78]	GETTABUP 	1 0 0	; _ENV "print"
+	27	[78]	LOADK    	2 7	; "Cleaned "
+	28	[78]	MOVE     	3 0
+	29	[78]	LOADK    	4 8	; " from the lab."
+	30	[78]	CONCAT   	2 3
+	31	[78]	CALL     	1 2 1	; 1 in 0 out
+	32	[78]	JMP      	6	; to 39
+	33	[81]	GETTABUP 	1 0 0	; _ENV "print"
+	34	[81]	LOADK    	2 9	; "Lab cleaning skipped: '"
+	35	[81]	MOVE     	3 0
+	36	[81]	LOADK    	4 10	; "' not found in stash."
+	37	[81]	CONCAT   	2 3
+	38	[81]	CALL     	1 2 1	; 1 in 0 out
+	39	[84]	RETURN0  	
+
+function <xdd.lua:98,243> (283 instructions at 0076b2f8)
+1 param, 26 slots, 3 upvalues, 36 locals, 45 constants, 0 functions
+	1	[99]	GETTABUP 	1 0 0	; _ENV "print"
+	2	[99]	LOADK    	2 1	; "-- Starting BB Code --"
+	3	[99]	CALL     	1 2 1	; 1 in 0 out
+	4	[102]	GETTABUP 	1 0 2	; _ENV "split"
+	5	[102]	GETTABUP 	2 0 3	; _ENV "bb_code"
+	6	[102]	LOADK    	3 4	; "\n"
+	7	[102]	CALL     	1 3 2	; 2 in 1 out
+	8	[105]	LOADFALSE	2
+	9	[106]	LOADFALSE	3
+	10	[107]	NEWTABLE 	4 0 0	; 0
+	11	[107]	EXTRAARG 	0
+	12	[109]	LOADFALSE	5
+	13	[110]	LOADI    	6 0
+	14	[111]	NEWTABLE 	7 0 0	; 0
+	15	[111]	EXTRAARG 	0
+	16	[113]	GETTABUP 	8 0 5	; _ENV "ipairs"
+	17	[113]	MOVE     	9 1
+	18	[113]	CALL     	8 2 5	; 1 in 4 out
+	19	[113]	TFORPREP 	8 257	; to 277
+	20	[114]	GETTABUP 	14 0 6	; _ENV "string"
+	21	[114]	GETFIELD 	14 14 7	; "trim"
+	22	[114]	MOVE     	15 13
+	23	[114]	CALL     	14 2 2	; 1 in 1 out
+	24	[114]	MOVE     	13 14
+	25	[115]	EQK      	13 8 1	; ""
+	26	[115]	JMP      	250	; to 277
+	27	[115]	SELF     	14 13 9k	; "sub"
+	28	[115]	LOADI    	16 1
+	29	[115]	LOADI    	17 1
+	30	[115]	CALL     	14 4 2	; 3 in 1 out
+	31	[115]	EQK      	14 10 0	; "#"
+	32	[115]	JMP      	1	; to 34
+	33	[116]	JMP      	243	; to 277
+	34	[119]	GETTABUP 	14 0 2	; _ENV "split"
+	35	[119]	MOVE     	15 13
+	36	[119]	LOADK    	16 11	; " "
+	37	[119]	CALL     	14 3 2	; 2 in 1 out
+	38	[120]	GETTABUP 	15 0 6	; _ENV "string"
+	39	[120]	GETFIELD 	15 15 12	; "lower"
+	40	[120]	GETI     	16 14 1
+	41	[120]	CALL     	15 2 2	; 1 in 1 out
+	42	[123]	EQK      	15 13 0	; "ding"
+	43	[123]	JMP      	35	; to 79
+	44	[127]	GETI     	16 14 2
+	45	[128]	GETTABUP 	17 0 6	; _ENV "string"
+	46	[128]	GETFIELD 	17 17 12	; "lower"
+	47	[128]	GETI     	18 14 3
+	48	[128]	CALL     	17 2 2	; 1 in 1 out
+	49	[129]	GETTABUP 	18 0 6	; _ENV "string"
+	50	[129]	GETFIELD 	18 18 12	; "lower"
+	51	[129]	GETI     	19 14 4
+	52	[129]	CALL     	18 2 2	; 1 in 1 out
+	53	[131]	TEST     	16 0
+	54	[131]	JMP      	9	; to 64
+	55	[131]	GETTABUP 	19 0 14	; _ENV "tonumber"
+	56	[131]	MOVE     	20 16
+	57	[131]	CALL     	19 2 2	; 1 in 1 out
+	58	[131]	TEST     	19 0
+	59	[131]	JMP      	4	; to 64
+	60	[131]	EQK      	17 15 0	; "times"
+	61	[131]	JMP      	2	; to 64
+	62	[131]	EQK      	18 16 1	; "then"
+	63	[131]	JMP      	6	; to 70
+	64	[132]	GETTABUP 	19 0 0	; _ENV "print"
+	65	[132]	LOADK    	20 17	; "Syntax error in DING statement: "
+	66	[132]	MOVE     	21 13
+	67	[132]	CONCAT   	20 2
+	68	[132]	CALL     	19 2 1	; 1 in 0 out
+	69	[133]	RETURN   	19 1 0	; 0 out
+	70	[136]	LOADTRUE 	5
+	71	[137]	GETTABUP 	19 0 14	; _ENV "tonumber"
+	72	[137]	MOVE     	20 16
+	73	[137]	CALL     	19 2 2	; 1 in 1 out
+	74	[137]	MOVE     	6 19
+	75	[138]	NEWTABLE 	19 0 0	; 0
+	76	[138]	EXTRAARG 	0
+	77	[138]	MOVE     	7 19
+	78	[138]	JMP      	198	; to 277
+	79	[139]	EQK      	15 18 0	; "end_ding"
+	80	[139]	JMP      	20	; to 101
+	81	[140]	TEST     	5 1
+	82	[140]	JMP      	4	; to 87
+	83	[141]	GETTABUP 	16 0 0	; _ENV "print"
+	84	[141]	LOADK    	17 19	; "Error: END_DING without matching DING."
+	85	[141]	CALL     	16 2 1	; 1 in 0 out
+	86	[142]	RETURN   	16 1 0	; 0 out
+	87	[145]	LOADI    	16 1
+	88	[145]	MOVE     	17 6
+	89	[145]	LOADI    	18 1
+	90	[145]	FORPREP  	16 3	; to 94
+	91	[146]	GETTABUP 	20 0 20	; _ENV "execute_bb_lang"
+	92	[146]	MOVE     	21 7
+	93	[146]	CALL     	20 2 1	; 1 in 0 out
+	94	[145]	FORLOOP  	16 4	; to 91
+	95	[149]	LOADFALSE	5
+	96	[150]	LOADI    	6 0
+	97	[151]	NEWTABLE 	16 0 0	; 0
+	98	[151]	EXTRAARG 	0
+	99	[151]	MOVE     	7 16
+	100	[151]	JMP      	176	; to 277
+	101	[152]	TEST     	5 0
+	102	[152]	JMP      	6	; to 109
+	103	[153]	GETTABUP 	16 0 21	; _ENV "table"
+	104	[153]	GETFIELD 	16 16 22	; "insert"
+	105	[153]	MOVE     	17 7
+	106	[153]	MOVE     	18 13
+	107	[153]	CALL     	16 3 1	; 2 in 0 out
+	108	[153]	JMP      	168	; to 277
+	109	[157]	EQK      	15 23 0	; "if"
+	110	[157]	JMP      	34	; to 145
+	111	[161]	GETI     	16 14 2
+	112	[162]	GETI     	17 14 3
+	113	[163]	GETTABUP 	18 0 14	; _ENV "tonumber"
+	114	[163]	GETI     	19 14 4
+	115	[163]	CALL     	18 2 2	; 1 in 1 out
+	116	[164]	GETTABUP 	19 0 6	; _ENV "string"
+	117	[164]	GETFIELD 	19 19 12	; "lower"
+	118	[164]	GETI     	20 14 5
+	119	[164]	CALL     	19 2 2	; 1 in 1 out
+	120	[166]	TEST     	16 0
+	121	[166]	JMP      	6	; to 128
+	122	[166]	TEST     	17 0
+	123	[166]	JMP      	4	; to 128
+	124	[166]	TEST     	18 0
+	125	[166]	JMP      	2	; to 128
+	126	[166]	EQK      	19 16 1	; "then"
+	127	[166]	JMP      	6	; to 134
+	128	[167]	GETTABUP 	20 0 0	; _ENV "print"
+	129	[167]	LOADK    	21 24	; "Syntax error in IF statement: "
+	130	[167]	MOVE     	22 13
+	131	[167]	CONCAT   	21 2
+	132	[167]	CALL     	20 2 1	; 1 in 0 out
+	133	[168]	RETURN   	20 1 0	; 0 out
+	134	[171]	LOADTRUE 	2
+	135	[172]	GETTABUP 	20 0 25	; _ENV "evaluate_condition"
+	136	[172]	MOVE     	21 16
+	137	[172]	MOVE     	22 17
+	138	[172]	MOVE     	23 18
+	139	[172]	CALL     	20 4 2	; 3 in 1 out
+	140	[172]	MOVE     	3 20
+	141	[173]	NEWTABLE 	20 0 0	; 0
+	142	[173]	EXTRAARG 	0
+	143	[173]	MOVE     	4 20
+	144	[173]	JMP      	132	; to 277
+	145	[174]	EQK      	15 26 0	; "end_if"
+	146	[174]	JMP      	17	; to 164
+	147	[175]	TEST     	2 1
+	148	[175]	JMP      	4	; to 153
+	149	[176]	GETTABUP 	16 0 0	; _ENV "print"
+	150	[176]	LOADK    	17 27	; "Error: END_IF without matching IF."
+	151	[176]	CALL     	16 2 1	; 1 in 0 out
+	152	[177]	RETURN   	16 1 0	; 0 out
+	153	[180]	TEST     	3 0
+	154	[180]	JMP      	3	; to 158
+	155	[181]	GETTABUP 	16 0 20	; _ENV "execute_bb_lang"
+	156	[181]	MOVE     	17 4
+	157	[181]	CALL     	16 2 1	; 1 in 0 out
+	158	[183]	LOADFALSE	2
+	159	[184]	LOADFALSE	3
+	160	[185]	NEWTABLE 	16 0 0	; 0
+	161	[185]	EXTRAARG 	0
+	162	[185]	MOVE     	4 16
+	163	[185]	JMP      	113	; to 277
+	164	[186]	TEST     	2 0
+	165	[186]	JMP      	6	; to 172
+	166	[187]	GETTABUP 	16 0 21	; _ENV "table"
+	167	[187]	GETFIELD 	16 16 22	; "insert"
+	168	[187]	MOVE     	17 4
+	169	[187]	MOVE     	18 13
+	170	[187]	CALL     	16 3 1	; 2 in 0 out
+	171	[187]	JMP      	105	; to 277
+	172	[195]	GETI     	16 14 2
+	173	[196]	GETTABUP 	17 0 14	; _ENV "tonumber"
+	174	[196]	GETI     	18 14 3
+	175	[196]	CALL     	17 2 2	; 1 in 1 out
+	176	[197]	LOADFALSE	18
+	177	[198]	GETTABUP 	19 0 28	; _ENV "pairs"
+	178	[198]	GETUPVAL 	20 1	; valid_commands
+	179	[198]	CALL     	19 2 5	; 1 in 4 out
+	180	[198]	TFORPREP 	19 4	; to 185
+	181	[199]	EQ       	24 15 0
+	182	[199]	JMP      	2	; to 185
+	183	[200]	LOADTRUE 	18
+	184	[201]	JMP      	2	; to 187
+	185	[198]	TFORCALL 	19 2
+	186	[198]	TFORLOOP 	19 6	; to 181
+	187	[203]	CLOSE    	19
+	188	[204]	TEST     	18 1
+	189	[204]	JMP      	7	; to 197
+	190	[205]	GETTABUP 	19 0 0	; _ENV "print"
+	191	[205]	LOADK    	20 29	; "Yo, that's not a valid command:"
+	192	[205]	MOVE     	21 15
+	193	[205]	LOADK    	22 30	; "; at line"
+	194	[205]	MOVE     	23 12
+	195	[205]	CALL     	19 5 1	; 4 in 0 out
+	196	[206]	RETURN   	19 1 0	; 0 out
+	197	[209]	EQK      	15 31 0	; "cook"
+	198	[209]	JMP      	22	; to 221
+	199	[210]	TEST     	16 1
+	200	[210]	JMP      	5	; to 206
+	201	[211]	GETTABUP 	19 0 0	; _ENV "print"
+	202	[211]	LOADK    	20 32	; "What do you want to cook jesse?"
+	203	[211]	CALL     	19 2 1	; 1 in 0 out
+	204	[212]	RETURN   	19 1 0	; 0 out
+	205	[212]	JMP      	10	; to 216
+	206	[213]	TEST     	16 0
+	207	[213]	JMP      	8	; to 216
+	208	[213]	TEST     	17 1
+	209	[213]	JMP      	6	; to 216
+	210	[214]	GETTABUP 	19 0 0	; _ENV "print"
+	211	[214]	LOADK    	20 33	; "how many should we cook"
+	212	[214]	MOVE     	21 16
+	213	[214]	LOADK    	22 34	; "jesse?"
+	214	[214]	CALL     	19 4 1	; 3 in 0 out
+	215	[215]	RETURN   	19 1 0	; 0 out
+	216	[217]	GETTABUP 	19 0 31	; _ENV "cook"
+	217	[217]	MOVE     	20 16
+	218	[217]	MOVE     	21 17
+	219	[217]	CALL     	19 3 1	; 2 in 0 out
+	220	[217]	JMP      	56	; to 277
+	221	[218]	EQK      	15 35 0	; "sell"
+	222	[218]	JMP      	37	; to 260
+	223	[219]	TEST     	16 1
+	224	[219]	JMP      	5	; to 230
+	225	[220]	GETTABUP 	19 0 0	; _ENV "print"
+	226	[220]	LOADK    	20 36	; "What do you want to sell jesse?"
+	227	[220]	CALL     	19 2 1	; 1 in 0 out
+	228	[221]	RETURN   	19 1 0	; 0 out
+	229	[221]	JMP      	25	; to 255
+	230	[222]	TEST     	16 0
+	231	[222]	JMP      	23	; to 255
+	232	[222]	TEST     	17 1
+	233	[222]	JMP      	21	; to 255
+	234	[223]	GETUPVAL 	19 2	; state
+	235	[223]	GETTABLE 	19 19 16
+	236	[223]	LTI      	19 10 0
+	237	[223]	JMP      	7	; to 245
+	238	[224]	GETTABUP 	19 0 0	; _ENV "print"
+	239	[224]	LOADK    	20 37	; "how much of '"
+	240	[224]	MOVE     	21 16
+	241	[224]	LOADK    	22 38	; "' should we sell jesse?"
+	242	[224]	CALL     	19 4 1	; 3 in 0 out
+	243	[225]	RETURN   	19 1 0	; 0 out
+	244	[225]	JMP      	10	; to 255
+	245	[226]	GETUPVAL 	19 2	; state
+	246	[226]	GETTABLE 	19 19 16
+	247	[226]	GEI      	19 10 0
+	248	[226]	JMP      	6	; to 255
+	249	[227]	GETTABUP 	19 0 0	; _ENV "print"
+	250	[227]	LOADK    	20 37	; "how much of '"
+	251	[227]	MOVE     	21 16
+	252	[227]	LOADK    	22 39	; "' should we sell heisenberg?"
+	253	[227]	CALL     	19 4 1	; 3 in 0 out
+	254	[228]	RETURN   	19 1 0	; 0 out
+	255	[231]	GETTABUP 	19 0 35	; _ENV "sell"
+	256	[231]	MOVE     	20 16
+	257	[231]	MOVE     	21 17
+	258	[231]	CALL     	19 3 1	; 2 in 0 out
+	259	[231]	JMP      	17	; to 277
+	260	[232]	EQK      	15 40 0	; "check_stash"
+	261	[232]	JMP      	4	; to 266
+	262	[233]	GETTABUP 	19 0 40	; _ENV "check_stash"
+	263	[233]	MOVE     	20 16
+	264	[233]	CALL     	19 2 1	; 1 in 0 out
+	265	[233]	JMP      	11	; to 277
+	266	[234]	EQK      	15 41 0	; "say_my_name"
+	267	[234]	JMP      	4	; to 272
+	268	[235]	GETTABUP 	19 0 41	; _ENV "say_my_name"
+	269	[235]	MOVE     	20 16
+	270	[235]	CALL     	19 2 1	; 1 in 0 out
+	271	[235]	JMP      	5	; to 277
+	272	[236]	EQK      	15 42 0	; "clean_lab"
+	273	[236]	JMP      	3	; to 277
+	274	[237]	GETTABUP 	19 0 43	; _ENV "cleanLab"
+	275	[237]	MOVE     	20 16
+	276	[237]	CALL     	19 2 1	; 1 in 0 out
+	277	[113]	TFORCALL 	8 2
+	278	[113]	TFORLOOP 	8 259	; to 20
+	279	[241]	CLOSE    	8
+	280	[242]	GETTABUP 	8 0 0	; _ENV "print"
+	281	[242]	LOADK    	9 44	; "-- Ending BB Code --"
+	282	[242]	CALL     	8 2 1	; 1 in 0 out
+	283	[243]	RETURN   	8 1 0	; 0 out
+
+function <xdd.lua:246,248> (8 instructions at 007610a8)
+1 param, 4 slots, 0 upvalues, 1 local, 3 constants, 0 functions
+	1	[247]	SELF     	1 0 0k	; "match"
+	2	[247]	LOADK    	3 1	; "^%s*(.*%S)%s*$"
+	3	[247]	CALL     	1 3 2	; 2 in 1 out
+	4	[247]	TEST     	1 1
+	5	[247]	JMP      	1	; to 7
+	6	[247]	LOADK    	1 2	; ""
+	7	[247]	RETURN1  	1
+	8	[248]	RETURN0  	
