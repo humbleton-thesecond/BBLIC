@@ -1,0 +1,6 @@
+# Selling Products
+cook meth 5
+cook chili_p 3
+sell meth 2
+sell chili_p 5
+sell meth 5 # this will not work because there is less meth than the amount to sell
