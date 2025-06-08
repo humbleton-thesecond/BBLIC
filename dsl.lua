@@ -1,5 +1,5 @@
 -- BBILICLaL
-
+local dsl = {}
 local state = {}
 
 -- --- Utility function for string splitting ---
@@ -95,7 +95,7 @@ local valid_commands = {
   "clean_lab"
 }
 -- Core interpreter function
-function execute_bb_lang(code_lines)
+function dsl:execute(code_lines)
   print"-- Starting BB Code --"
   
   -- Split the entire code string into lines for processing
@@ -246,3 +246,5 @@ end
 function string.trim(s)
    return s:match("^%s*(.*%S)%s*$") or ""
 end
+
+return dsl
