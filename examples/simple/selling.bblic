@@ -1,4 +1,5 @@
 # Selling Products
+# syntax: sell <product> <amount>
 cook meth 5
 cook chili_p 3
 sell meth 2
