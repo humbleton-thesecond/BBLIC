@@ -1,0 +1,12 @@
+# if statements
+# syntax: if <product> <operator> <amount> then
+# operators: less_than, greater_than, equal_to 
+
+cook meth 5
+sell meth 5
+if meth less_than 5 then
+cook meth 5
+end_if
+sell meth 5
+if meth what h then # error will happen because "what" is not an operator, and h is not a number 
+end_if
