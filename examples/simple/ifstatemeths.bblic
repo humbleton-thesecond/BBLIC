@@ -1,6 +1,6 @@
 # if statements
 # syntax: if <product> <operator> <amount> then
-# operators: less_than, greater_than, equal_to 
+# operators: less_than, greater_than, equals
 
 cook meth 5
 sell meth 5
